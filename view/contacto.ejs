@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+    <body class="header-sticky page-loading">
+
+
+        <div class="boxed">
+
+
+            <!-- header -->
+            <%- include('./partials/header.ejs') %>
+                <div class="flat-row pad-bottom30px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="flat-contact-us style1">
+                                    <h2 class="title no-margin-top">Mejora la productividad de tu negocio!</h2>
+                                    <h4 class="desc no-margin-top">Contactanos hoy al <a class="scheme2" href="18002323485">1 800 232 3485</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flat-row parallax parallax3">
+                    <div class="overlay bg-f1f2f8"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="flat-wrapper">
+                                <div class="flat-iconbox clearfix">
+                                    <div class="item-three-column">
+                                        <div class="iconbox">
+                                            <div class="box-header">
+                                                <div class="box-icon">
+                                                    <i class="fa fa-comments"></i>
+                                                </div>
+                                                <h5 class="box-title">Charla con nosotros</h5>
+                                            </div>
+                                            <div class="box-content">
+                                                <p>Pregunta por nuestros talleres</p>
+                                                <p>
+                                                    <strong>Numero de la oficina:</strong> 1 800 232 3485<br>
+                                                    <strong>Numero movil:</strong> 1 800 232 3488<br>
+                                                    <!-- <a class="scheme2" href="#"><span class="__cf_email__" data-cfemail="d1a5b9b4bcb4a2b7bdb0a591b6bcb0b8bdffb2bebc">[email&#160;protected]</span></a> -->
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-three-column">
+                                        <div class="iconbox">
+                                            <div class="box-header">
+                                                <div class="box-icon">
+                                                    <i class="fa fa-clock-o"></i>
+                                                </div>
+                                                <h5 class="box-title">Horario de trabajo</h5>
+                                            </div>
+                                            <div class="box-content">
+                                                <p>Nos encontramos abiertos</p>
+                                                <p>
+                                                    <strong>Lunes-Viernes:</strong> 8:00am – 19:00pm<br>
+                                                    <strong>Sabados:</strong> 8:00am – 13:00pm<br>
+                                                    <strong>Domingos:</strong> Cerrado
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-three-column">
+                                        <div class="iconbox">
+                                            <div class="box-header">
+                                                <div class="box-icon">
+                                                    <i class="fa fa-globe"></i>
+                                                </div>
+                                                <h5 class="box-title">Localizacion de la empresa</h5>
+                                            </div>
+                                            <div class="box-content">
+                                                <p>Nos encontramos en:</p>
+                                                <p>
+                                                    <strong>Provincia:</strong> Peravia.<br>
+                                                    <strong>Ciudada:</strong> Bani.<br>
+                                                    <strong>Pais:</strong> Republica Dominicana.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flat-row pad-bottom20px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="flat-contact-us style1">
+                                    <h4 class="desc no-margin-top no-margin-bottom">Contactanos via email</h4>
+                                    <p>Envianos un correo con la informacion que necesitas</p>
+                                </div>
+
+                                <div class="flat-divider d20px"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <form id="contactform" method="post" action="./contact/contact-process.php">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <span><input name="name" type="text" value="" placeholder="Nombre completo" required="required"></span>
+                                            <span><input id="email" name="email" type="email" value="" placeholder="Correo Electronico" required="required"></span>
+                                            <span><input id="phone" name="phone" type="text" value="" placeholder="Numero telefonico" required="required"></span>
+                                            <span><input id="subject" name="subject" type="text" value="" placeholder="Pregunta o peticion" required="required"></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span><textarea name="message" placeholder="Mensaje" required="required"></textarea></span>
+                                            <span class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Enviar correo">
+</span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flat-map">
+                </div>
+
+                <!-- Footer -->
+                <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

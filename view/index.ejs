@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+<body class="header-sticky page-loading">
+
+  <!-- header -->
+  <%- include('./partials/header.ejs') %>
+  <div class="tp-banner-container">
+    <div class="tp-banner w-100">
+      <img src="images/hero.jpg" class="w-100" alt="">
+    </div>
+  </div>
+
+  <div class="flat-row flat-general sidebar-right">
+    <div class="container">
+      <div class="row">
+        <div class="flat-wrapper">
+          <div class="general company-history" id="about-us">
+            <div class="general-text">
+              <h4 class="title text-center">A Otro Nivel Latinoamérica:</h4>
+              <p>Inicia sus operaciones un 24 de septiembre del 2012, siendo formalmente
+                constituida el 11 de marzo del 2015..</p>
+              <p>Conformado por un equipo multidisciplinario de profesionales, certificados en
+                <strong>Programación Neurolingüística y Coaching Ontológico</strong> por
+                prestigiosas instituciones internacionales..
+              </p>
+              <p>Estamos avalados por:</p>
+              <ul>
+                <li><strong>Asociación Euro Americana de Profesionales en Ciencias Humanas y
+                    Sociales.</strong></li>
+                <li><strong>IANLPAC – International Association of NLP and Coaching</strong>
+                </li>
+                <li><strong>Red Latinoamericana de PNL</strong></li>
+              </ul>
+            </div>
+            <div class="flat-divider d40px"></div>
+            <ul class="history">
+              <li>
+                <div class="year-content">
+                  <h3>Misión</h3>
+                  <p>Proporcionar capacitación y asesoramiento con calidad de forma
+                    innovadora, generando soluciones integrales entorno a los recursos
+                    humanos de las organizaciones desde la PNL y el Coaching.</p>
+                </div>
+              </li>
+              <li>
+                <div class="year-content">
+                  <h3>Visión</h3>
+                  <p>Somos una excelente alternativa de asesoramiento y capacitación logrando
+                    así, mejorar la calidad de vida de nuestros clientes, incrementando su
+                    potencial y liderazgo personal, interpersonal e intrapersonal.
+                    Aportando un mejor rendimiento en las áreas del desempeño familiar,
+                    empresarial y corporativo.</p>
+                </div>
+              </li>
+              <li>
+                <div class="year-content">
+                  <h3>Valores</h3>
+                  <p>Trabajar en un buen clima laboral con honestidad, integridad, confianza,
+                    y respeto por los demás.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="bg-themes">
+    <div class="flat-row parallax parallax5 pad165px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="home-title">No es el más fuerte de las especies el que sobrevive, tampoco el
+              más inteligente. El que sobrevive es aquel que es más adaptable al cambio </h3>
+            <p class="text-center name-cite">Charles Darwin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flat-row flat-latest-news pad-bottom70px">
+    <div class="container">
+      <div class="row">
+        <div class="flat-wrapper">
+          <div class="flat-title-button">
+            <h3 class="title"><i class="fa fa-newspaper-o"></i>Nuestros eventos</h3>
+            <p><a class="button sm" href="/evets">Ver todos nuestros eventos</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="flat-divider d30px"></div>
+      <div class="row">
+        <div class="col">
+          <div class="row d-grid">
+            <!--  -->
+            <% if(events.length !==0){ %>
+            <% events.forEach(event=> { %>
+            <div class="col-md-4">
+              <article class="blog-posts">
+                <div class="entry-wrapper">
+                  <div class="entry-cover">
+                    <!-- <h4 class="entry-time">
+                                                <span class="entry-day">13</span>
+                                                <span class="entry-month">Apr</span>
+                                            </h4> -->
+                    <a href="/eventOne?id=<%= event.id %> "><img src="<%= event.image %>" alt="images"></a>
+                  </div>
+                  <div class="entry-content-wrap">
+                    <div class="entry-header">
+                      <h2 class="entry-title">
+                        <a href="/eventOne?id=<%= event.id %>">
+                          <%= event.title %>
+                        </a>
+                      </h2>
+                    </div>
+                    <!-- <div class="entry-footer">
+                                                <div class="entry-meta">
+                                                    <span class="entry-author"><a href="#">themesflat</a></span>
+                                                    <span class="entry-categories"><a href="#">Sales Enablement</a></span>
+                                                </div>
+                                            </div> -->
+                  </div>
+                </div>
+              </article>
+            </div>
+            <% }); %>
+
+            <% } %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="flat-row flat-latest-news pad-bottom70px">
+    <div class="container">
+      <div class="row">
+        <div class="flat-wrapper">
+          <div class="flat-title-button">
+            <h3 class="title"><i class="fa fa-newspaper-o"></i>Nuestros Blogs</h3>
+            <p><a class="button sm" href="/blogs">Ver todos nuestros blogs</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="flat-divider d30px"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <% if (blogs.length !==0){ %>
+                <% console.log(blogs) %> 
+               
+                <% blogs.forEach(blog => { %>
+                  
+            <div class="col-md-6">
+
+              <article class="blog-posts mb-2">
+                <div class="entry-wrapper">
+                  <div class="entry-cover">
+
+                    <a href="/blogOne?id=<%= blog.id %> "><img src="<%= blog.image %>" style="width: 350px;" alt="images"></a>
+                  </div>
+                  <div class="entry-content-wrap">
+                    <div class="entry-header">
+                      <h2 class="entry-title">
+                        <a href="/blogOne?id=<%= blog.id %>">
+                          <%= blog.title %>
+                        </a>
+                      </h2>
+                    </div>
+
+                  </div>
+                </div>
+              </article>
+            </div>
+            <% }); %> <% } %>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="clients-image style1 clearfix">
+    <h2 class="text-center">Nuestros certificados</h2>
+    <div class="clients-item">
+      <div class="item-img">
+        <img src="images/redlatinpnl-08-02.jpg" alt="images">
+      </div>
+      <!-- <p class="tooltip">Customer 01</p> -->
+    </div>
+    <div class="clients-item">
+      <div class="item-img">
+        <img src="images/ba590f9e154847b9b9623cd26f7e5f1e.jpg" alt="images">
+      </div>
+      <!-- <p class="tooltip">Customer 02</p> -->
+    </div>
+    <div class="clients-item">
+      <div class="item-img">
+        <img src="images/aeapro_trans_background-300x212.png" alt="images">
+      </div>
+      <!-- <p class="tooltip">Customer 03</p> -->
+    </div>
+  </div>
+  <!-- Footer -->
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%=title %>
+    </title>
+    <link rel="stylesheet" href="stylesheets/login.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1>Registro panel de administrador</h1>
+        <form method="POST" action="/register">
+            <div class="txt_field">
+                <input type="text" name="email" id="email" required>
+                <span></span>
+                <label>Correo Electronico</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="name" id="name" required>
+                <span></span>
+                <label>Nombre Completo</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" name="password" required>
+                <span></span>
+                <label>Contraseña</label>
+            </div>
+            <input type="submit" value="Iniciar sesion">
+            <div class="signup_link">
+                ¿Ya tienes cuenta? <a href="/login">Iniciar Sesion</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

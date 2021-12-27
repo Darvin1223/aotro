@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "localhost:3000/admin",
+            "request": "launch",
+            "url": "localhost:3000/admin"
+        }
+    ]
+}

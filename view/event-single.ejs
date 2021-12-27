@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+    <body class="header-sticky page-loading">
+
+
+        <div class="boxed">
+
+
+            <!-- header -->
+            <%- include('./partials/header.ejs') %>
+
+                <% if(event){ %>
+
+                    <div class="blog-single">
+                        <div class="container">
+                            <div class="row">
+                                <div class="content-wrap">
+                                    <div class="main-content">
+                                        <div class="main-content-wrap">
+                                            <div class="content-inner">
+                                                <article class="blog-post">
+                                                    <div class="entry-wrapper">
+                                                        <div class="entry-cover">
+                                                            <img src="<%= event.image %> " alt="images">
+                                                        </div>
+                                                        <div class="entry-header">
+
+                                                            <div class="entry-header-content">
+                                                                <h4 class="entry-title">
+                                                                    <%= event.title %>
+                                                                </h4>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="entry-content">
+                                                            <%= event.description %>
+                                                        </div>
+
+                                                    </div>
+                                                </article>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                        <!-- Footer -->
+                        <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

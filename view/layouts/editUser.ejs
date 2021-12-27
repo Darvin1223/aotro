@@ -1,0 +1,32 @@
+<% if(user){ %>
+    <div class="card">
+        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+            <h6 class="text-white text-capitalize ps-3">Editando usuarios</h6>
+        </div>
+        <div class="card-body">
+            <form action="/update-user" method="POST">
+                <input type="hidden" id="id" name="id" value="<%= user.id %>" hidden>
+                <div class="form-group">
+                    <label for="email">Correo Electronico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su nombre de usuario " value="<%= user.email %>">
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre complato " value="<%= user.name %>">
+                </div>
+
+                <div class="form-check mb-5">
+                    <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name = "rol" value="Administrador">
+                Es un administrador
+                <span class="form-check-sign">
+                    <span class="check"></span>
+                </span>
+            </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt4">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <% } %>

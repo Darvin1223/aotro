@@ -1,0 +1,45 @@
+<% if(Users){ %>
+    <div class="row">
+        <div class="col-lg-10 col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h4 class="card-title text-center"> Users</h4>
+                    <a href="/addUser" class="btn btn-info">Agregar Usuario <i class="fas fa-plus"></i></a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table tablesorter " id="">
+                            <thead class=" text-primary">
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Nombre</th>
+                                    <th>ROL</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% Users.forEach(user => { %>
+                                    <tr>
+                                        <td>
+                                            <%= user.email %>
+                                        </td>
+                                        <td>
+                                            <%= user.name %>
+                                        </td>
+                                        <td>
+                                            <%= user.rol %>
+                                        </td>
+                                        <td>
+                                            <a href="/edit-user?id=<%= user.id %>" class="link__edit btn btn-info"> Editar</a>
+                                            <a href="/delete-user/<%= user.id %>" class="btn btn-danger"> Elimibar</a>
+                                        </td>
+                                    </tr>
+                                    <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>

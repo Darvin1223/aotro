@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+        <h6 class="text-white text-capitalize ps-3"> Creando Blog</h6>
+    </div>
+    <div class="card-body">
+        <form action="/create-blog" method="POST" enctype="multipart/form-data">
+            <div class="form-group mb-5">
+                <label for="user">Titulo del Blog</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Ingrese el titlulo del Blog` " />
+            </div>
+
+            <div class="custom-file mb-5">
+                <input type="file" name="image" />
+            </div>
+            <div class="form-group mb-5">
+                <label for="description">Descripcion</label>
+                <textarea class="form-control" id="description" name="description" placeholder="informacion del Blog"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt4">Guardar</button>
+        </form>
+    </div>
+</div>

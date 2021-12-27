@@ -1,0 +1,42 @@
+<% if (blogs) {%>
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h4 class="card-title text-center"> Blogs</h4>
+                    <a href="/addBlog" class="btn btn-info">Agregar Blog<i class="fas fa-plus"></i></a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table tablesorter " id="">
+                            <thead class=" text-primary">
+                                <tr>
+                                    <th>Nombre del blog</th>
+                                    <th>Descripcion</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% blogs.forEach(blog => { %>
+                                    <tr>
+                                        <td>
+                                            <%= blog.title %>
+                                        </td>
+                                        <td>
+                                            <%= blog.short_description %>
+                                        </td>
+                                        <td>
+                                            <a href="/edit-blog?id=<%= blog.id %>" class="link__edit btn btn-info"> Editar</a>
+                                            <a href="/delete-blog/<%= blog.id %>" class="btn btn-danger"> Elimibar</a>
+                                        </td>
+                                    </tr>
+                                    <% }); %>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>

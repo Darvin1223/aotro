@@ -1,0 +1,54 @@
+<%if(events){%>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="card ">
+                <div class="card-header">
+                    <h4 class="card-title text-center"> Eventos</h4>
+                    <a href="/addevent" class="btn btn-info">Agregar Evento <i class="fas fa-plus"></i></a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table tablesorter " id="">
+                            <thead class=" text-primary">
+                                <tr>
+                                    <th>Nombre de evento</th>
+                                    <th>Descripcion</th>
+                                    <th>fecha</th>
+                                    <th>hora</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%events.forEach(event => { %>
+                                    <tr>
+                                        <td>
+                                            <%= event.title %>
+                                        </td>
+                                        <td>
+                                            <%= event.short_description %>
+                                        </td>
+                                        <td>
+                                            <%= event.fecha %>
+                                        </td>
+                                        <td>
+                                            <%= event.hora %>
+                                        </td>
+                                        <td>
+                                            <td>
+                                                <a href="/edit-event?id=<%= event.id %>" class="link__edit btn btn-info"> Editar</a>
+                                                <a href="/delete-event/<%= event.id %>" class="btn btn-danger"> Elimibar</a>
+                                            </td>
+                                        </td>
+
+                                    </tr>
+                                    <%}); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% } %>

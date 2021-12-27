@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<!-- head -->
+<%- include('./partials/head.ejs') %>
+
+    <body class="header-sticky page-loading">
+
+
+        <div class="boxed">
+
+            <!-- header -->
+            <%- include('./partials/header.ejs') %>
+
+
+                <div class="flat-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="flat-wrapper">
+                                <div class="blog-shortcode clearfix">
+                                    <% if(blogs){ %>
+                                        <% blogs.forEach(blog => { %>
+                                            <article class="blog-posts item-three-column">
+                                                <div class="entry-wrapper">
+                                                    <div class="entry-cover">
+
+                                                        <a href="/blogOne?id=<%= blog.id %>"><img src="<%= blog.image %>" alt="images" style="width: 350px;"></a>
+                                                    </div>
+                                                    <div class="entry-content-wrap">
+                                                        <div class="entry-header">
+                                                            <h2 class="entry-title">
+                                                                <a href="/blogOne?id=<%= blog.id %>">
+                                                                    <%= blog.title %>
+                                                                </a>
+                                                            </h2>
+                                                        </div>
+                                                        <p class="entry-content">
+                                                            <%= blog.short_description %>
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <% }); %>
+                                                <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>
